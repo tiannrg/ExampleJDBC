@@ -24,7 +24,6 @@ public class DBEmployeeType extends  DBConnection {
                 String sql =  "Insert into employee_type (descript) values(?)";
                 PreparedStatement preparedStatement =   connection.prepareStatement (sql);
                 preparedStatement.setString (1, employeeType.getDescript() );
-                preparedStatement.setString (1, employeeType.getDescript() );
                 preparedStatement.executeUpdate();
             } catch (Exception e) {
                         MessageUtils.showErrorMessage("Error al insertar tipo de empleado" + e.getMessage());
