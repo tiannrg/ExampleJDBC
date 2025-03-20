@@ -19,12 +19,14 @@ import java.util.List;
 public class DBEmployeeType extends  DBConnection {
     public void insert (EmployeeType employeeType)
     {
-            connect();
+            
             try {
+                connect();
                 String sql =  "Insert into employee_type (descript) values(?)";
                 PreparedStatement preparedStatement =   connection.prepareStatement (sql);
                 preparedStatement.setString (1, employeeType.getDescript() );
                 preparedStatement.executeUpdate();
+                 preparedStatement.close();
             } catch (Exception e) {
                         MessageUtils.showErrorMessage("Error al insertar tipo de empleado" + e.getMessage());
             }finally {
@@ -100,7 +102,7 @@ public class DBEmployeeType extends  DBConnection {
             String sql = "select * from employee_type where id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
-            ResultSet resultSet = preparedStatement.executeQuery(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
             
             if (resultSet.next()) {
                 employeeType = new EmployeeType();
