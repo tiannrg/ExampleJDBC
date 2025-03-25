@@ -17,7 +17,8 @@ import java.util.List;
 /**
  * fecha: 20/3/2025
  *
- * @author rojas objetivo: permite consultas y transacciones en la tabla
+ * @author rojas
+ * objetivo: permite consultas y transacciones en la tabla
  * employee
  */
 public class DBEmployee extends DBConnection {
