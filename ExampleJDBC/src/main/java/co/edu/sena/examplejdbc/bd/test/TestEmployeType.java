@@ -17,13 +17,16 @@ public class TestEmployeType {
         DBEmployeeType dBEmployeeType = new DBEmployeeType();
         //insertar
         EmployeeType employeeType  = new  EmployeeType(6,"SUBDIRECTOR");
-        //dBEmployeeType.insert(employeeType);
+        dBEmployeeType.insert(employeeType);
+        
         //actualizar
-        //employeeType.setId(5);
-        //employeeType.setDescript("CORDINADOR");
-        //dBEmployeeType.update(employeeType);
+        employeeType.setId(5);
+        employeeType.setDescript("CORDINADOR");
+        dBEmployeeType.update(employeeType);
+        
         //eliminar
-        //dBEmployeeType.delete(5);
+        dBEmployeeType.delete(5);
+        
         //consultar todos
         List<EmployeeType> listEmployeeType = dBEmployeeType.findALL();
         for (EmployeeType e : listEmployeeType) {
