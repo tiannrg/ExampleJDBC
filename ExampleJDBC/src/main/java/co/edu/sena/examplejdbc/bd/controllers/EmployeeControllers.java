@@ -9,8 +9,9 @@ import co.edu.sena.examplejdbc.model.Employee;
 import java.util.List;
 
 /**
- *
- * @author Nicol
+ *fecha 25/3/3035
+ * @author rojas
+ * objetivo: Implementar la interface para controlar el model Employee
  */
 public class EmployeeControllers implements IEmployeeControllers {
 

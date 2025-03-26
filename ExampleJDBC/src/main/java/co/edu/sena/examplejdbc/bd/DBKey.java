@@ -139,6 +139,10 @@ public class DBKey  extends  DBConnection{
         }
         return key;
     }
+
+    public Key getKeyById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
     
