@@ -143,7 +143,6 @@ public Record findById(int id) {
             }
 
             resultSet.close();
-            preparedStatement.close();
 
         } catch (SQLException e) {
             MessageUtils.showErrorMessage("Error al consultar empleado" + e.getMessage());
