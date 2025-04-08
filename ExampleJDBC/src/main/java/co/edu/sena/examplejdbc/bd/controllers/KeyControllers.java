@@ -107,5 +107,11 @@ public class KeyControllers  implements  IKeyControllers{
         return dbk.findById(id);
     }
 
+    @Override
+    public List<Key> getAllKey() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
+
+

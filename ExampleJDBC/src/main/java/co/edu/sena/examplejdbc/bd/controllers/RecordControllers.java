@@ -81,12 +81,22 @@ public class RecordControllers  implements  IRecordControllers{
         {
             throw new Exception("La hora de fin  es obligatoria");
         }
+         
+        if ("".equals(record.getStatus()))
+        {
+            throw new Exception("El estado  es obligatorio");
+        }
         
         //FK's
         
         if(record.getEmployeeId() == null)
         {
             throw new Exception("El id del empleado es obligatoria");
+        }
+        
+        if(record.getKeyId() == null)
+        {
+             throw new Exception("El id de la llave es obligatoria");
         }
         
         //La FK no es autoincremental, se debe validar existencia del registro
@@ -133,7 +143,7 @@ public class RecordControllers  implements  IRecordControllers{
         {
             throw new Exception("No existe un registro con ese Id");
         }
-        return findById(id);
+        return dbr.findById(id);
     }
 
 }

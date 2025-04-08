@@ -18,4 +18,6 @@ public interface IKeyControllers {
     public void delete(int id)throws Exception;
     public List<Key> findALL() throws Exception;
     public Key findById(int id) throws Exception;
+
+    public List<Key> getAllKey();
 }
